@@ -1,0 +1,290 @@
+:root {
+    --color_bg: #100020;
+    --color_fg_blue: #201060b0;
+    --color_fg_purple: #302050b0;
+    --color_fg_pink: #401040b0;
+    --color_border_blue: #4090c0;
+    --color_border_purple: #7080a0;
+    --color_border_pink: #806090;
+    --color_text: #90e0e0;
+}
+
+html {
+    background-color: var(--color_bg);
+    color: var(--color_text);
+    font-family: "Rubik";
+    font-size: 20px;
+    margin: 0 10%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+.findMeButton {
+    background-color: var(--color_fg_pink);
+    border: 3px solid var(--color_border_pink);
+    color: var(--color_text);
+    font-size: 24px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mainCity {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--color_fg_purple);
+    border: 3px solid var(--color_border_purple);
+    padding: 15px 15px 0px 15px;
+}
+.mainCityHeader {
+    width: 320px;
+    flex-grow: 1;
+    align-items: center;
+}
+.mainCityHeader h2 {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 48px; 
+}
+.mainCityHeader img {
+    width: 25%;
+}
+
+.mainCityHeader .temperature {
+    width: 50%;
+    font-size: 150px;
+}
+.mainCity .weatherList {
+    width: 320px;
+    flex-grow: 1;
+}
+.mainCity .weatherList li {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+.favTitle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.favInput {
+    display: flex;
+    width: 70%;
+}
+.favInput input {
+    background-color: var(--color_fg_pink);
+    border: 3px solid var(--color_border_pink);
+    color: var(--color_text);
+    font-size: 36px;
+    width: 100%;
+    height: 50px;
+    align-self: center;
+}
+.addButton {
+    background-image: url(plus.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    border: none;
+}
+
+.favList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.favCity {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color_fg_purple);
+    border: 3px solid var(--color_border_purple);
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 20px;
+    width: 45%;
+}
+.favCityHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:10px;
+}
+.favCityHeader h3 {
+    font-size: 30px;
+}
+.favCityHeader img {
+    width: 20%;
+}
+.favCity .temperature {
+    font-size: 50px;
+}
+
+.weatherList {
+    height: 100%;
+    margin: 10px;
+}
+.weatherList li {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color_fg_blue);
+    border: 3px solid var(--color_border_blue);
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.deleteButton {
+    background-image: url(cross.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    border: none;
+}
+
+.cityLoadPlaceholder {
+    background-image: url(update.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+@media screen and (max-width: 1600px) {
+    .mainCityHeader .temperature {
+        font-size: 125px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .mainCityHeader .temperature {
+        font-size: 110px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    html {
+        margin: 0 4%;
+    }
+    .mainCityHeader h2 {
+        font-size: 36px;
+    }
+    .mainCityHeader .temperature {
+        font-size: 100px;
+    }
+    .mainCity ul li {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .favCityHeader h2 {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 950px) {
+    html {
+        margin: 0 3%;
+    }
+    header {
+        font-size: 15px;
+    }
+
+    .mainCityHeader h2 {
+        font-size: 30px;
+    }
+    
+    .mainCityHeader .temperature {
+        font-size: 75px;
+    }
+
+    .favCityHeader h2 {
+        font-size: 20px;
+    }
+    .favCityHeader .temperature {
+        font-size: 40px;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    .mainCityHeader {
+        width: 100%;
+    }
+    .mainCityHeader .weatherList {
+        width: 100%;
+    }
+
+    .mainCityHeader .temperature {
+        font-size: 125px;
+    }
+    .findMeButton span {
+        display: none;
+    }
+
+    .findMeButton {
+        background-image: url(update.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-color: transparent;
+        height: 50px;
+        width: 50px;
+    }
+    .favTitle h2 {
+        width: 100%;
+    }
+    .favInput {
+        width: 100%;
+    }
+    .favCity {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    html {
+        margin: 0 1%;
+    }
+    .mainCityHeader .temperature {
+        font-size: 75px;
+    }
+    .mainCity .weatherList li {
+        font-size: 18px;
+    }
+    .favInput input {
+        font-size: 20px;
+    }
+    .favCity .temperature {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 15px;
+        margin: 0;
+    }
+    .mainCityHeader .temperature {
+        font-size: 60px;
+    }
+    .mainCity .weatherList li {
+        font-size: 15px;
+    }
+    .favInput input {
+        font-size: 15px;
+    }
+    .favCityHeader h3 {
+        font-size: 20px;
+    }
+    .favCity .temperature {
+        font-size: 20px;
+    }
+    .weatherList {
+        margin: 0;
+    }
+}

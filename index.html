@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Козлов Андрей M33011</title>
+    <meta name="description" content="Responsive HTML5 Website Landing Page for Developers">
+    <meta name="author" content="Kozlov Andrey M33011 at ITMO University">
+    <meta name="keywords" content="Андрей Козлов,Погода,Прогноз погоды">
+    <link href='styles.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <script src="script.js"></script>
+</head>
+
+<body onload="init()">
+    <header>
+        <h1>Погода здесь</h1>
+        <button type="button" class="findMeButton" onclick="getLocation()"><span>Найти меня</span></button>
+    </header>
+    <main>
+        <div id="mainCity" class="mainCity">
+            <div class="mainCityHeader">
+                <h2></h2>
+                <img/>
+                <span class="temperature"></span>
+            </div>
+            <ul class="weatherList">
+                <li><b>Ветер</b></li>
+                <li><b>Облачность</b></li>
+                <li><b>Давление</b></li>
+                <li><b>Влажность</b></li>
+                <li><b>Координаты</b></li>
+            </ul>
+        </div>
+        <div class="favTitle">
+            <h2>Избранное</h2>
+            <form class="favInput" onsubmit="return false">
+                <input id="favInputName" type="text" placeholder="Введите название города">
+                <button id="favInputButton" type="button" class="addButton" onclick="addCity('name', true)"></button>
+            </form>
+        </div>
+        <ul id="favList" class="favList">
+            <template id="favCityTemplate">
+                <li class="favCity">
+                    <div class="favCityHeader">
+                        <h3></h3>
+                        <img />
+                        <span class="temperature"></span>
+                        <button type="button" class="deleteButton"></button>
+                    </div>
+                    <ul class="weatherList">
+                        <li><b>Ветер</b></li>
+                        <li><b>Облачность</b></li>
+                        <li><b>Давление</b></li>
+                        <li><b>Влажность</b></li>
+                        <li><b>Координаты</b></li>
+                    </ul>
+                </li>
+            </template>
+        </ul>
+    </main>
+</body>
+</html>
+
